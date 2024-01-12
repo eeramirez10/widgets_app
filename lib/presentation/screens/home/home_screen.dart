@@ -3,8 +3,8 @@ import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
 import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
 
-
 class HomeScreen extends StatelessWidget {
+  static const name = 'home_screen';
   const HomeScreen({super.key});
 
   @override
@@ -19,13 +19,10 @@ class HomeScreen extends StatelessWidget {
 }
 
 class _HomeView extends StatelessWidget {
-
- 
   const _HomeView();
 
   @override
   Widget build(BuildContext context) {
-
     return ListView.builder(
       itemCount: appMenuItems.length,
       prototypeItem: ListTile(
@@ -50,17 +47,23 @@ class _CustomListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final colors = Theme.of(context).colorScheme;
     return ListTile(
-      leading: Icon(item.icon, color: colors.primary,),
-      trailing: Icon(Icons.arrow_forward_ios_outlined, color: colors.primary,),
+      leading: Icon(
+        item.icon,
+        color: colors.primary,
+      ),
+      trailing: Icon(
+        Icons.arrow_forward_ios_outlined,
+        color: colors.primary,
+      ),
       title: Text(item.title),
       subtitle: Text(item.subTitle),
-      onTap: (){
+      onTap: () {
         // Navigator.of(context).push(
         //   MaterialPageRoute(
         //     builder: (context) => const ButtonsScreen()
         //   )
         // );
-       context.push(item.link);
+        context.push(item.link);
       },
     );
   }
