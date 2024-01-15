@@ -15,7 +15,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    final appTheme = AppTheme(selectedColor: 4);
+    final appTheme = AppTheme(selectedColor: 1);
 
     return  MaterialApp.router(
       routerConfig: router,
