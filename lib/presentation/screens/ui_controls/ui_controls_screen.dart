@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class UiControlsScreen extends StatelessWidget {
   static const name = 'uiControls_screen';
   const UiControlsScreen({super.key});
@@ -21,6 +22,8 @@ class _UiControlsView extends StatefulWidget {
 }
 
 enum Transportation { car, plain, boat, submarine }
+
+
 
 class _UiControlsViewState extends State<_UiControlsView> {
   bool switchValue = false;
