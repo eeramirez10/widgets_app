@@ -3,10 +3,12 @@ import 'package:widgets_app/presentation/screens/animated/animated_screen.dart';
 import 'package:widgets_app/presentation/screens/app_tutorial/app_tutorial_screen.dart';
 import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
 import 'package:widgets_app/presentation/screens/cards/card_screen.dart';
+import 'package:widgets_app/presentation/screens/counter/counter_screen.dart';
 import 'package:widgets_app/presentation/screens/home/home_screen.dart';
 import 'package:widgets_app/presentation/screens/infinite_scroll/infinite_scroll_screen.dart';
 import 'package:widgets_app/presentation/screens/progress/progress_screen.dart';
 import 'package:widgets_app/presentation/screens/snackbar/snackbar_screen.dart';
+import 'package:widgets_app/presentation/screens/theme_changer/theme_changer_screen.dart';
 import 'package:widgets_app/presentation/screens/ui_controls/ui_controls_screen.dart';
 
 final router = GoRouter(routes: <RouteBase>[
@@ -46,4 +48,12 @@ final router = GoRouter(routes: <RouteBase>[
       name: InfiniteScrollScreen.name,
       path: '/infinite',
       builder: (context, state) => const InfiniteScrollScreen()),
+  GoRoute(
+      name: CouterScreen.name,
+      path: '/counter',
+      builder: (context, state) => const CouterScreen()),
+  GoRoute(
+      name: ThemeChangerScreen.name,
+      path: '/theme-changer',
+      builder: (context, state) => const ThemeChangerScreen()),
 ]);
